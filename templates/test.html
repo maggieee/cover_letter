@@ -1,0 +1,14 @@
+{% block content %}
+
+<div class="form-group">
+    <h2 class="title">Let's have a string to cut!!!</h2>
+    <form method="POST" action="/test">
+        <div class="form-control"><label for="string_to_cut">string_to_cut
+            <input type="text" id="string_to_cut" name="string_to_cut" required>
+        </div>
+
+        <p><input type=submit class='btn btn-warning btn-block' value="Submit string_to_cut"></p>
+    </form>
+</div>
+
+{% endblock %}
