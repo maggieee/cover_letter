@@ -1,1 +1,1 @@
-web: gunicorn app:lyft
+web: gunicorn app:server
