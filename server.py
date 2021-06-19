@@ -6,13 +6,9 @@ app = Flask(__name__)
 def index():
     """This is a home page."""
 
-    return """
-    <html>
-    <body>
-      <h1>Home</h1>
-    </body>
-    </html>
-    """
+    return render_template("home.html")
+    
+
 @app.route('/test')
 def show_form():
     """Ask for string_to_cut."""
