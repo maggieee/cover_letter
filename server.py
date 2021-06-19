@@ -32,7 +32,7 @@ def generate_return_string():
     current = 2
 
     for i in range(0, len(string_to_cut)):
-        if current + 3 <= len(string_to_cut):
+        if current + 1 <= len(string_to_cut):
             return_string += string_to_cut[current]
             current = current + 3
         else:
