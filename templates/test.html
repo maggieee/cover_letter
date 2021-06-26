@@ -1,14 +1,17 @@
 {% block content %}
 
-<div class="form-group">
-    <h2 class="title">Let's have a string to cut!!!</h2>
+<!-- <div class="form-group"> -->
+    <h2 class="title">Please enter your company info</h2>
     <form method="POST" action="/test">
-        <div class="form-control"><label for="string_to_cut">string_to_cut
-            <input type="text" id="string_to_cut" name="string_to_cut" required>
+        <div class="form-control"><label for="your name">Your name
+            <input type="text" id="hiring_manager" name="hiring_manager" required>
+        </div>
+        <div class="form-control"><label for="your comany">Your company's name
+            <input type="text" id="company_name" name="company_name" required>
         </div>
 
-        <p><input type=submit class='btn btn-warning btn-block' value="Submit string_to_cut"></p>
+        <p><input type=submit value="Submit company info"></p>
     </form>
-</div>
+<!-- </div> -->
 
 {% endblock %}

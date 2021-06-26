@@ -23,22 +23,22 @@ def generate_return_string():
 
     if request.json:
         data = request.json
-        string_to_cut = data["string_to_cut"]
+        hiring_manager = data['hiring_manager']
+        company_name = data['company_name']
 
     else:
-        string_to_cut = request.form.get('string_to_cut')
+        hiring_manager = request.form.get('hiring_manager')
+        company_name = request.form.get('company_name')
+    
+    cover_letter = f"""Hi {hiring_manager}, I got your name and company info when you made a 
+    POST request by clicking the 'Submit' button. Alternatively, you may have used the command 
+    line to e.g., curl  -d 'hiring_manager=jade' -X POST http://127.0.0.1:5000/test, to get this response
+    from the server. At any rate, I want to share with you what I have to offer as a developer 
+    at {company_name}. """
 
-    return_string = ""
-    current = 2
+    return render_template("cover_letter.html", hiring_manager = hiring_manager, company_name = company_name, cover_letter = cover_letter)
+    # jsonify({'cover letter': cover_letter}) 
 
-    for i in range(0, len(string_to_cut)):
-        if current + 1 <= len(string_to_cut):
-            return_string += string_to_cut[current]
-            current = current + 3
-        else:
-            return jsonify({'return string': return_string})
-
-    return jsonify({'return string': return_string})
     
 
 
